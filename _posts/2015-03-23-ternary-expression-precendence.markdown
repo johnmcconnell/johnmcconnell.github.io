@@ -48,7 +48,7 @@ this situation. Below is the example `test.cpp` file.
 
 int main()
 {
-  (std::cout << 5) == 5 ? (std::cout << "here") : (std::cout << "here2");
+  std::cout << 5 == 5 ? (std::cout << "here") : (std::cout << "here2");
   std::cout << std::endl;
 }
 {% endhighlight %}
@@ -58,23 +58,20 @@ When we compile we see a nice warning from the compiler.
 {% highlight bash %}
 jmcconnell1@john-mac:~ $ g++ test.cpp
 test.cpp:5:18: warning: overloaded operator << has lower precedence than comparison operator [-Woverloaded-shift-op-parentheses]
-  std::cout << 5 == 5 ? 1 : 2;
+  std::cout << 5 == 5 ? (std::cout << "here") : (std::cout << "here2");
   ~~~~~~~~~~~~~~ ^  ~
 test.cpp:5:13: note: place parentheses around the '<<' expression to silence this warning
-  std::cout << 5 == 5 ? 1 : 2;
+  std::cout << 5 == 5 ? (std::cout << "here") : (std::cout << "here2");
             ^
   (             )
 test.cpp:5:18: note: place parentheses around comparison expression to evaluate it first
-  std::cout << 5 == 5 ? 1 : 2;
+  std::cout << 5 == 5 ? (std::cout << "here") : (std::cout << "here2");
                  ^
                (     )
-test.cpp:5:25: warning: expression result unused [-Wunused-value]
-  std::cout << 5 == 5 ? 1 : 2;
-                        ^
 test.cpp:5:18: warning: comparison of constant 5 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
-  std::cout << 5 == 5 ? 1 : 2;
+  std::cout << 5 == 5 ? (std::cout << "here") : (std::cout << "here2");
   ~~~~~~~~~~~~~~ ^  ~
-3 warnings generated.
+2 warnings generated.
 {% endhighlight %}
 
 Running the code, we see ruby is behaving the same as c++ in handling
