@@ -30,13 +30,13 @@ So what is going on? Well nothing too crazy.
 First, shortening the code to just the simple expressions yields:
 
 {% highlight ruby %}
-  exp1 << exp2 ? exp3 : exp4
+  exp1 method exp2 method exp3 ? exp4 : exp5
 {% endhighlight %}
 
 But the interpeter is parsing the expression with this precendence:
 
 {% highlight ruby %}
-  ((exp1 << exp2) ? exp3 : exp4)
+  ((exp1 method exp2) method exp3) ? exp4 : exp5
 {% endhighlight %}
 
 A couple of coworkers saw this and thought the current interpreter
@@ -48,7 +48,7 @@ this situation. Below is the example `test.cpp` file.
 
 int main()
 {
-  std::cout << 5 == 5 ? 1 : 2;
+  (std::cout << 5) == 5 ? (std::cout << "here") : (std::cout << "here2");
   std::cout << std::endl;
 }
 {% endhighlight %}
@@ -82,7 +82,7 @@ prescendence, which is arguably a good thing.
 
 {% highlight bash %}
 jmcconnell1@john-mac:~ $ ./a.out
-5
+5here2
 {% endhighlight %}
 
 Now that we understand the behavior, let's try to penetrate the mystery
