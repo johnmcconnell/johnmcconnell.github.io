@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "HW 6 - Tagging"
+date:   2015-04-19 9:33:11
+categories: jekyll update
+---
+
+# Homework 6
+
+## Mutli-class Logistic Regression
+{% highlight text %}
+{% endhighlight %}
+
+## Hidden Markov Models
+{% highlight text %}
+T = [ 0, 1, 2 ], W = [ a, b, c, d ]
+
+π = [ 0.33, 0.33, 0.34 ] = P(T(s) = t0)
+
+Axy = P(t(i) = t(y)|t(i−1) = t(x))
+A = [[0.5, 0.3, 0.2],
+     [0.2, 0.4, 0.4],
+     [0.3, 0.5, 0.2]]
+
+Byz = P(w(i) = w(z)|t(i) = t(y))
+B = [[0.6, 0.1, 0.2, 0.1],
+     [0.3, 0.4, 0.1, 0.2],
+     [0.1, 0.2, 0.3, 0.4]]
+
+{% endhighlight %}
+
+### Problem 1
+{% highlight text %}
+P(a, d, b, a, c)
+{% endhighlight %}
+Trellis
+
+|  Tag  |  W0  |  W1  |  W2  |  W3 |  W4  |
+|-------|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   0   | 0.198 = 0.33 * 0.6, | 0.0099 = 0.198 * 0.5 * 0.1,  | ? = 0.0099 * , |   0   |   0   |
+|   1   | 0.099 = 0.33 * 0.3, | 0.01188 = 0.198 * 0.3 * 0.2, | ? = 0.0099 * , |   0   |   0   |
+|   2   | 0.033 = 0.34 * 0.1, | 0.01584 = 0.198 * 0.2 * 0.4, | ? = 0.0099 * , |   0   |   0   |
+
+{% highlight text %}
+forward = 0.07029
+{% endhighlight %}
+
+{% highlight text %}
+backward = 0.700
+{% endhighlight %}
