@@ -1,0 +1,1 @@
+ObjectSpace.garbage_collect
