@@ -3,7 +3,7 @@ layout: post
 title: "Template Method Design Pattern"
 description: ""
 category: 'Design Patterns'
-tags: []
+tags: [template method, design patterns, smalltalk]
 ---
 {% include JB/setup %}
 

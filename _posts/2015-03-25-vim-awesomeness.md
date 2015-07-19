@@ -41,3 +41,11 @@ Now let's run
 {% highlight vim %}
 :verbose function
 {% endhighlight %}
+
+### 3. convert uppercase and lowercase quickly.
+Sometimes you want to capitalize or lower a certain region.
+
+Steps:
+1. Highlight region
+2. Press `shift + U` to capitalize.
+3. Press `shift + u` to lower.
