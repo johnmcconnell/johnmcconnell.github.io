@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Strategy Design Pattern Part 1"
+title: "Strategy Design Pattern"
 description: ""
 category: "design patterns"
 tags: [smalltalk, design patterns, strategy]
@@ -76,6 +76,7 @@ For example, suppose `ElementA` had this serialization code:
 {% highlight smalltalk %}
 ElementA>>serializeTo: aStream
     "this is a *terrible* example of a JSON serialization method..."
+
     '{' printOn: aStream.
     '"name": "' printOn: aStream.
     name printOn: aStream.
@@ -89,6 +90,7 @@ Then our `SerializeStrategyA` serialization code will be:
 {% highlight smalltalk %}
 SerializeStrategyA>>serialize: elementA To: aStream
     "this is a *terrible* example of a JSON serialization method..."
+
     '{' printOn: aStream.
     '"name": "' printOn: aStream.
     elementA name printOn: aStream.
