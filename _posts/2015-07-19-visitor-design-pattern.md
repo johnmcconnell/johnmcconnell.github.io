@@ -32,8 +32,9 @@ accomplishes. Not only does this better fit our requirements it will also
 decrease the amount of code needed to write.
 
 ### Accept
-Under the strategy pattern the element contains it's own concrete strategy.
-Each concrete strategy shares the same interface so they can be swapped at
+Under the visitor pattern the element contains it's own concrete callback to
+the object visiting.
+Each visitor shares the same interface so they can be swapped at
 runtime. For example:
 
 {% highlight smalltalk %}
@@ -140,6 +141,6 @@ visitor pattern works best when you want to separate the data from the
 algorithm. Accordingly, it allows algorithms to not care how the nodes/data is
 traversed but their function on it. It does not work well when there is
 algorithmic dependencies between nodes. In short, this allows you to avoid
-having to break up the algorithm into a the different parts on each element.
+having to break up the algorithm into different parts on each element.
 Instead, you keep the logic centralized in one class. Also, look to see if
 multiple algorithms can be solved using the visitor pattern.
