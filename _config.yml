@@ -31,6 +31,8 @@ john:
 landing:
   home: 'Home'
   about: 'About'
+  cv: 'CV'
+  transcript: 'Transcript'
   career: 'Career'
   skills: 'Skills'
   projects: 'Project'
@@ -55,12 +57,8 @@ project:
 # blog index
 index:
   home: 'Home'
-  python: 'Python'
-  linux: 'Linux'
-  html: 'HTML'
-  database: 'Database'
-  mac: 'Mac'
-  life: 'Life'
+  cv: 'CV'
+  transcript: 'Transcript'
 
 # donate
 donate:
