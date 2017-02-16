@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+<channel>
+<atom:link href='http://reductist.com/' rel='self' type='application/rss+xml'/>
+<title>
+The Reductist
+</title>
+<link>
+http://reductist.com/
+</link>
+<description>
+Meanderings of software
+</description>
+<lastBuildDate>
+Wed, 15 Feb 2017 21:59:20 -0800
+</lastBuildDate>
+<generator>
+clj-rss
+</generator>
+<item>
+<guid>
+http://reductist.com/posts-output/2017-02-15-hello/
+</guid>
+<link>
+http://reductist.com/posts-output/2017-02-15-hello/
+</link>
+<title>
+Hello World!
+</title>
+<description>
+&lt;h3 id=&quot;hello&quot;&gt;Hello&lt;/h3&gt;&lt;p&gt;This is a blog&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Wed, 15 Feb 2017 00:00:00 -0800
+</pubDate>
+</item>
+</channel>
+</rss>
